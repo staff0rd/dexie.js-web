@@ -152,7 +152,7 @@ So what are the rules to be aware of?
 * Tables are not deleted unless you specify `null` as the stores-specification for that table in a new version.
 * New versions need only to specify changed tables.
 
-Important to notice is that in case you got 50 tables and just need to add an index on one of them, you don't need to repeat all tables again in the new version-spec. Just specify an updated version of the table you need to alter. Indexes work differently though - they are dropped as soon as you don't specify them in a new versions.
+Important to notice is that in case you have 50 tables and just need to add an index on one of them, you don't need to repeat all tables again in the new version-spec. Just specify an updated version of the table you need to alter. Indexes work differently though - they are dropped as soon as you don't specify them in a new versions.
 
 ```javascript
 db.version(1).stores({
